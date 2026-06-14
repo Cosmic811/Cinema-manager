@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    padding: 20px;
+    margin: 0;
+    color: #1f2937;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #111827;
+}
+
+form {
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.inputsInfo {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+}
+
+input {
+    padding: 11px 12px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+button {
+    padding: 10px 14px;
+    cursor: pointer;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+#cancel-edit {
+    display: none;
+    background-color: #6b7280;
+}
+
+#cancel-edit:hover {
+    background-color: #4b5563;
+}
+#error {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.errors {
+    background-color: #d83838;
+    color: #ffffff;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border-left: 5px solid #dc2626;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    min-width: 260px;
+    max-width: 340px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 10px;
+    animation: slideIn 0.25s ease;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#movie-list {
+    max-width: 720px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.movie-warn {
+    grid-column: 1 / -1;
+    color: #6b7280;
+    text-align: center;
+    font-weight: 600;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px dashed #d1d5db;
+}
+
+.filmCard {
+    background-color: #ffffff;
+    color: #111827;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.filmCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+.topTitle {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.topTitle h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #111827;
+    text-align: center;
+}
+
+.bodyT {
+    color: #4b5563;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin: 0;
+    gap: 6px;
+    text-align: center;
+}
+
+.bodyT p,
+.bodyT span {
+    margin: 0;
+}
+
+.cardActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.editButton {
+    background-color: #2563eb;
+}
+
+.editButton:hover {
+    background-color: #1d4ed8;
+}
+
+.deleteButton {
+    background-color: #dc2626;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.deleteButton:hover {
+    background-color: #b91c1c;
+}
