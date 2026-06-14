@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cinema Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cinema Manager</h1>
+    <form id="movie-form">
+        <label class="inputsInfo" for="movie-search"> Search movies: </label>
+        <input type="text" id="movie-search" placeholder="Search movie..."> 
+        <label class="inputsInfo" for="movie-title"> Movie title: </label>
+        <input type="text" id="movie-title" name="information"> <br>
+        <label class="inputsInfo" for="movie-director"> Director: </label>
+        <input type="text" id="movie-director" name="information"> <br>
+        <label class="inputsInfo" for="movie-year"> Release year: </label>
+        <input type="number" id="movie-year" name="information"> <br>
+        <button type="submit" id="submit"> Submit </button>
+        <button type="button" id="cancel-edit">Cancel edit</button>
+    </form>
+    <div id="error" name="errors"> </div>    
+    <div id="movie-list">   
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
